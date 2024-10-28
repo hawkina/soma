@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ease-crc.org/ont/CROMA.owl#"
+     xml:base="http://www.ease-crc.org/ont/CROMA.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SOMA="http://www.ease-crc.org/ont/SOMA.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SOMA1="http://www.ease-crc.org/ont/SOMA.owl#">
+    <owl:Ontology rdf:about="http://www.ease-crc.org/ont/CROMA.owl">
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA-ACT.owl"/>
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA-IO.owl"/>
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA-OBJ.owl"/>
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#expresses_description_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/CROMA.owl#expresses_description_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses"/>
+            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">expresses description of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#resolved_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/CROMA.owl#resolved_from">
+        <rdfs:subPropertyOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#affects"/>
+        <owl:inverseOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#resolved_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#resolved_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/CROMA.owl#resolved_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#isAffectedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#hasKey -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/CROMA.owl#hasKey">
+        <rdfs:subPropertyOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#hasPersistentIdentifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Action_Designator -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Action_Designator">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#CRAM_Designator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Action_Designator_Design"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Action Designator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Action_Designator_Design -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Action_Designator_Design">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Designator_Design"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Action Designator Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#CRAM_Cognitive_Architecture -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#CRAM_Cognitive_Architecture">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Software_Configuration"/>
+        <rdfs:label xml:lang="en">CRAM Cognitive Architecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#CRAM_Designator -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#CRAM_Designator">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Designator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#resolved_to"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#CRAM_Designator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">CRAM Designator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#CRAM_Plan -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#CRAM_Plan">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#ActionExecutionPlan"/>
+        <rdfs:label>CRAM Plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Designator -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Designator">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+        <rdfs:comment xml:lang="en">Designator</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Designator_Design -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Designator_Design">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Design"/>
+        <rdfs:label xml:lang="en">Designator Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Location_Designator -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Location_Designator">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#CRAM_Designator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Location_Designator_Design"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Location Designator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Location_Designator_Design -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Location_Designator_Design">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Designator_Design"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Location Designator Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Motion_Designator -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Motion_Designator">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#CRAM_Designator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Motion_Designator_Design"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Motion Designator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Motion_Designator_Design -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Motion_Designator_Design">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Designator_Design"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Motion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Motion Designator Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Object_Designator -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Object_Designator">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#CRAM_Designator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Object_Designator_Design"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Object Designator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Object_Designator_Design -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Object_Designator_Design">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Designator_Design"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Object Designator Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Referential_Clause -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Referential_Clause">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+        <rdfs:label xml:lang="en">Referential Clause</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-OBJ.owl#ArtificialAgent -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-OBJ.owl#ArtificialAgent"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
