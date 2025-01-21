@@ -353,6 +353,14 @@
     
 
 
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#PR2 -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#PR2">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/CROMA.owl#Robot"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/CROMA.owl#PouringTool -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#PouringTool">
@@ -367,6 +375,14 @@
     <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Referential_Clause">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
         <rdfs:label xml:lang="en">Referential Clause</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#Robot -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Robot">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#ArtificialAgent"/>
     </owl:Class>
     
 
