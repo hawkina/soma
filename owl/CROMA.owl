@@ -213,6 +213,15 @@
     
 
 
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#DestinationPose -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#DestinationPose">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Setpoint"/>
+        <rdfs:comment>Describes the pose which is the destination/goal of a current action</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/CROMA.owl#LocationDesignator -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#LocationDesignator">
@@ -383,6 +392,24 @@
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#Robot">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#ArtificialAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#SourcePose -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#SourcePose">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Setpoint"/>
+        <rdfs:comment>The pose somebody or something is coming from. E.g. the source/origin pose of the robot before it starts moving to it&apos;s destination.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#TorsoHeight -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#TorsoHeight">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+        <rdfs:comment>Describes the Torso-height of the robot as a float</rdfs:comment>
     </owl:Class>
     
 
