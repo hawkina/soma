@@ -213,6 +213,15 @@
     
 
 
+    <!-- http://www.ease-crc.org/ont/CROMA.owl#KeepJointStates -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#KeepJointStates">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+        <rdfs:comment>KeepJointStates is a parameter from PyCRAM with the values True or False. True means, that the robot keeps the position of the body while navigating, False would imply that the robot is allowed to e.g. move the arms while navigating.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/CROMA.owl#LocationDesignator -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/CROMA.owl#LocationDesignator">
